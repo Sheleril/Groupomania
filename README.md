@@ -101,7 +101,7 @@ http://localhost:8080/ :bowtie:
 
 <h3 id="outils">Outils utilisés &#x1F6E0; </h3>
 
-- [Node.js] (https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/)
 - [VueJS](https://vuejs.org/) Pour le Frontend
 - [MySQL](https://www.mysql.com/fr/downloads/) Base de donnée relationnelle
 - [Sequelize](https://sequelize.org/) (Version 6.5.1)
