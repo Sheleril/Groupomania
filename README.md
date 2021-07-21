@@ -19,7 +19,6 @@ Le réseau social Groupomania est une application qui a été crée spécialemen
       <a href="#apropos">A propos du Site</a>
       <ul>
         <li><a href="#outils">Outils utilisés</a></li>
-        <li><a href="#doc">Documentation</a></li>
       </ul>
     </li>
     <li><a href="#dependence">Dépendences NPM</li> 
