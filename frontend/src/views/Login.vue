@@ -137,7 +137,7 @@ export default {
   .logo {
       display: flex;
       justify-content: center;
-      margin-bottom: 10%;
+      margin-bottom: 5%;
       margin-top: 8%;
   }
 
