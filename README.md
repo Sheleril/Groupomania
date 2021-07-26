@@ -47,6 +47,30 @@ DB_PASS= MdP
 
 Ceci est une sécurité pour la base de donnée, pour pouvoir avoir accès , mettez vos identifiants à la place de "Nom de la BDD" "Nom de l'utilisateur" "MdP".
 
+Il faut également crée un fichier appelé "config.json" et l'ajouter dans le dossier Config de votre Backend. Il devra suivre la structure suivante :
+
+```js
+{
+ "development": {
+    "username": "VotreUsername",
+    "password": "VotreMdP",
+    "database": "VotreDatabase",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+ }
+```
+
+Une fois que ceci est fait, dans votre terminal côté Backend veuillez, s'il vous plait,  mettre : 
+
+
+```js
+sequelize db:migrate
+```
+
+Puis entrer. Cela va vous crée les tables qui seront ainsi mises dans votre Base de Donnée.
+
+
 <h3 id="installation">Installation</h3>
 
 <h4 align="center">Côté Frontend</h4>
