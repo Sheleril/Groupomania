@@ -40,12 +40,14 @@ git clone https://github.com/Sheleril/Groupomania.git
 L'appeler `.env` , et suivre la structure qui suit :
 
 ```js
-DB_NAME= Nom de la BDD
-DB_USER= Nom de l'utilisateur
-DB_PASS= MdP
+DB_NAME= Votre nom de la BDD
+DB_USER= Votre nom de l'utilisateur
+DB_PASS= Votre MdP
+
+SECRET_KEY_TOKEN = Votre Clé Secrète
 ```
 
-Ceci est une sécurité pour la base de donnée, pour pouvoir avoir accès , mettez vos identifiants à la place de "Nom de la BDD" "Nom de l'utilisateur" "MdP".
+Ceci est une sécurité pour la base de donnée, pour pouvoir avoir accès , mettez vos identifiants à la place de "Nom de la BDD" "Nom de l'utilisateur" "MdP" sans oublier votre clé secrète de sécurité.
 
 Il faut également crée un fichier appelé "config.json" et l'ajouter dans le dossier Config de votre Backend. Il devra suivre la structure suivante :
 
