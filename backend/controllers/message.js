@@ -62,6 +62,7 @@ exports.createMessage = (req, res) => {
 
 // CONDITION POUR RECUPERER TOUT LES MESSAGES
 exports.getAllMessages = (req, res) => {
+    
     let headerAuth = req.headers['authorization'];
     let userId = jwtUtils.getUserId(headerAuth);
 

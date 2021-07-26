@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config()
 
-const JWT_SECRET_KEY = 'qsfqizugzpierguauzrç"égirdh^fsdoifjspiudgqpzûezgruf1654815213';
+const JWT_SECRET_KEY = process.env.SECRET_KEY_TOKEN
 
 // Exported functions
 module.exports = {

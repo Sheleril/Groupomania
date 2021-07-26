@@ -1,17 +1,18 @@
 //Appel des dépendances
 const express = require('express');
 const helmet = require('helmet');
-//const rateLimit = require('express-rate-limit');
+const rateLimit = require('express-rate-limit');
 const sequelize = require('./config/dbconnect');
 const path = require('path');
 
 const app = express();
 
 //Limite les requêtes dans un temps défini
-//const limiter = rateLimit({
-//    windowMs: 15 * 60 * 1000,
-//    max: 100
-//});
+const limiter = rateLimit({
+   windowMs: 15 * 60 * 1000,
+    max: 100
+});
+
 
 // Configuration de Body-Parser
 app.use(express.urlencoded({ extended: true}));
@@ -33,7 +34,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use(helmet());
-//app.use(limiter);
+app.use(limiter);
 
 
 const routesUser = require('./routes/user');
