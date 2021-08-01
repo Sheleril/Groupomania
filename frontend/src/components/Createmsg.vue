@@ -2,13 +2,13 @@
     <section class="card" id="section-create">
         <h3>Crée mon message</h3>
         <form>
-            <label>Titre : </label><input class="form-row_input" v-model="title" type="text" name="title" /> <br />
-            <label>Contenu : </label><textarea  class="form-row_input" v-model="content" type="text" name="content" rows="2" cols="20"></textarea> <br />
+            <label for='my_title'>Titre : </label><input class="form-row_input" v-model="title" type="text" name="title" id='my_title' /> <br />
+            <label for='my_content'>Contenu : </label><textarea id='my_content' class="form-row_input" v-model="content" type="text" name="content" rows="2" cols="20"></textarea> <br />
             <div class="img-form">
-                <label>Gif/Image : </label><input id='gif' class="form-row_input" type="file" name="file" ref= 'file' @change='selectFile()'/>
+                <label for='gif'>Gif/Image : </label><input id='gif' class="form-row_input" type="file" name="file" ref= 'file' @change='selectFile()'/>
             </div>
         </form>
-        <button class="button" type="submit"  @click="createMessage()">Publiez</button>
+        <button aria-label="Publiez" class="button" type="submit"  @click="createMessage()">Publiez</button>
     </section>
 </template>
 

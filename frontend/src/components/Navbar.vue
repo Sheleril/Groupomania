@@ -1,6 +1,6 @@
 <template>
         <div class='navbar'>
-            <img src='../assets/icon.svg' class='petit-logo'/>
+            <img src='../assets/icon.svg' class='petit-logo' alt="Favicon Groupomania"/>
             <div class="menu">
                 <ul>
                     <li class="menu-link"> <router-link to="/profile">Profil</router-link> </li>

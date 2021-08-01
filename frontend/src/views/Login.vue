@@ -1,20 +1,20 @@
 <template>
     <div class="logo">
-        <img src='../assets/monochrome-black.svg' />
+        <img src='../assets/monochrome-black.svg' alt='Logo de Groupomania' />
     </div>
     <div class="card">
         <h1 class="card_title" v-if="mode == 'login'" >Connexion</h1>
         <h1 class="card_title" v-else>Inscription</h1>
-        <p class="card_subtitle" v-if="mode =='login'">Tu n'as pas encore de compte ? <span class="card_action" @click="goToCreateAccount()">Créer un compte</span></p>
-        <p class="card_subtitle" v-else>Tu as déjà un compte ? <span class="card_action" @click="goToLogin()">Se connecter</span> </p>
+        <p class="card_subtitle" v-if="mode =='login'">Tu n'as pas encore de compte ? <span class="card_action" @click="goToCreateAccount()" aria-label="Cree un compte">Créer un compte</span></p>
+        <p class="card_subtitle" v-else>Tu as déjà un compte ? <span class="card_action" @click="goToLogin()" aria-label="Se connecter" >Se connecter</span> </p>
         <div class="form-row">
-            <input v-model="email" class="form-row_input" type="text" placeholder="Adresse mail" />
+            <input aria-label="Adresse Mail" v-model="email" class="form-row_input" type="text" placeholder="Adresse mail" />
         </div>
         <div class="form-row" v-if="mode == 'create'">
-            <input v-model="username" class="form-row_input" type="text" placeholder="Pseudo" />
+            <input aria-label="Pseudo" v-model="username" class="form-row_input" type="text" placeholder="Pseudo" />
         </div>
         <div class="form-row">
-            <input v-model="password" class="form-row_input" type="password" placeholder="Mot de passe" />
+            <input aria-label="Mot de Passe" v-model="password" class="form-row_input" type="password" placeholder="Mot de passe" />
         </div>
         <div class="form-row" v-if="mode == 'login' && status == 'error_login'">
             Adresse Mail et/ou Mot de passe invalide
@@ -23,11 +23,11 @@
             Adresse Mail déjà utilisée !
         </div>
         <div class="form-row">
-            <button @click="login()" class="button" :class="{'button--disabled' : !validateFields}" v-if="mode == 'login'">
+            <button aria-label="Connexion" @click="login()" class="button" :class="{'button--disabled' : !validateFields}" v-if="mode == 'login'">
                 <span v-if="status == 'loading'">Connexion en cours...</span>
                 <span v-else>Connexion</span>
             </button>
-            <button @click="createAccount()" class="button" :class="{'button--disabled' : !validateFields}" v-else>
+            <button aria-label="Creation compte" @click="createAccount()" class="button" :class="{'button--disabled' : !validateFields}" v-else>
                 <span v-if="status == 'loading'">Création en cours...</span>
                 <span v-else>Créer mon compte</span>
             </button>
@@ -128,7 +128,7 @@ export default {
   }
 
     .card_action{
-        color: lightskyblue;
+        color: #0879BF;
     }
     .card_action:hover {
         cursor:pointer;

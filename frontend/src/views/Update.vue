@@ -7,21 +7,21 @@
 
     <main>
         <section class="card">
-            <img v-if='user.avatar == null' src='../assets/avatar.png' />
+            <img v-if='user.avatar == null' src='../assets/avatar.png' alt='Avatar de base'/>
             <img v-else :src="user.avatar" alt="Avatar de l'utilisateur"/>
             <div>
                 <p v-if="user.bio == '' "> Vous n'avez pas encore écris votre Bio</p>
                 <p v-else>Ma biographie actuelle: {{user.bio}}</p> <br />
             </div>
             <form class="avatar-form">
-                <label>Avatar :</label><input type="file" name="avatar" ref="file" @change="selectFile()"/> <br/>
-                <label>Changer ma Biographie :</label><textarea id="bio" class="form-row_input" type="text" name="bio" placeholder="Qu'avez-vous à dire ? " maxlength="400" width="100%"></textarea>
+                <label for='my_avatar'>Avatar :</label><input id='my_avatar' type="file" name="avatar" ref="file" @change="selectFile()"/> <br/>
+                <label for='bio'>Changer ma Biographie :</label><textarea id="bio" class="form-row_input" type="text" name="bio" placeholder="Qu'avez-vous à dire ? " maxlength="400" width="100%"></textarea>
             </form>
-            <button class="modifbutton" @click="modifyProfil()" >Actualiser mon profil</button> <br />
-            <button class='button'><router-link to="/ModifyPassword" >Modifier mon mot de passe</router-link></button>
+            <button aria-label='Actualiser le profil' class="modifbutton" @click="modifyProfil()" >Actualiser mon profil</button> <br />
+            <button aria-label='Modifier le MdP' class='button'><router-link to="/ModifyPassword" >Modifier mon mot de passe</router-link></button>
         </section>
         <h2> OU </h2>
-        <button @click="deleteProfil()" type="submit" class="delete">Supprimer mon compte définitivement</button>
+        <button @click="deleteProfil()" type="submit" class="delete" aria-label='Supprimer mon compte' >Supprimer mon compte définitivement</button>
     </main>
 
 </template>

@@ -6,11 +6,11 @@
         <img :src=post.attachment alt="Image du post"/>
         <p class="content">{{post.content}}</p>
         <p>Crée le {{dateOfPost(post.createdAt)}}, par {{post.username}}</p>
-        <i @click="createLike(post.id)" id="btn-like" class="far fa-heart"></i> 
+        <i @click="createLike(post.id)" id="btn-like" class="far fa-heart" aria-label="Bouton J'aime" ></i> 
         <p>{{ likes }}</p> 
     </div>
     <div class='delete-btn' v-if="post.UserId == userId || user.isAdmin == true">
-        <button @click="deleteMessage()"  class="button">Supprimer ce message</button>
+        <button @click="deleteMessage()"  class="button" aria-label='Supprimer ce message' >Supprimer ce message</button>
     </div>
 
     <CreateComment />

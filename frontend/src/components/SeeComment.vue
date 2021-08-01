@@ -6,7 +6,7 @@
                 <p class='content'>{{comment.content}}</p>
                 <p class='end-date' >Le {{dateOfPost(comment.createdAt)}} </p>
                 <div v-if="comment.userId == userId || user.isAdmin == true">
-                    <i class="fas fa-trash-alt" @click="deleteComment(comment.id)" ></i>
+                    <i class="fas fa-trash-alt" @click="deleteComment(comment.id)" aria-label="Supprimer le commentaire" ></i>
                 </div>
             </div>
             <div v-else >

@@ -2,9 +2,9 @@
     <aside class="comment">
         <h3>Ajouter un commentaire</h3>
             <form>
-                <textarea class="form-row_input" v-model="content" type="text" name="content" rows="2" cols="20"></textarea>
+                <textarea aria-label="Ajouter un commentaire" class="form-row_input" v-model="content" type="text" name="content" rows="2" cols="20"></textarea>
             </form>
-        <button class="button" @click="addComment()">Envoyer</button>
+        <button aria-label="Envoyer" class="button" @click="addComment()">Envoyer</button>
     </aside>
 </template>
 
