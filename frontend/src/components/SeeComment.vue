@@ -1,5 +1,4 @@
 <template>
-    <section>
         <article class='card' v-for='comment in comments' :key='comment.id'>
             <div v-if="comment.userId != undefined">
                 <h3>{{comment.username}} a écris: </h3>
@@ -13,7 +12,6 @@
                 <p>{{comment.content}}</p>
             </div>
         </article>
-    </section>
 </template>
 
 <script>

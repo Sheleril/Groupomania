@@ -98,7 +98,7 @@ const store = createStore({
         commit('userInfos', response.data);
       })
       .catch(function(){
-
+        
       });
     },
   }

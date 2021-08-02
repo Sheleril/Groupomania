@@ -8,7 +8,7 @@
             <router-link :to=" { name: 'oneMsg', params: { id: post.id }} ">
             <div class="mon-article">
                 <h3>{{post.title}}</h3>
-                <img :src=post.attachment alt="Image du Post"/>
+                <img :src=post.attachment :alt="'Image du Post ' + post.id"/>
                 <p class="content">{{post.content}}</p>
                 <p>Crée le {{dateOfPost(post.createdAt)}}, par {{post.username}}</p>
             </div>
