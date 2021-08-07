@@ -126,6 +126,7 @@ a {
 
 .delete{
         font-size: x-large;
+        color: white;
 }
 
 @media screen and (max-width: 480px){
@@ -144,7 +145,8 @@ a {
     }
     .delete{
     background: brown;
-}
+    color: white;
+    }
 }
 
 button{

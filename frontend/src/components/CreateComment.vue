@@ -20,7 +20,6 @@ export default {
     },
     methods: {
         //CREATION DE LA FONCTION ADDCOMMENT POUR CREE UN COMMENTAIRE
-        //this.$router.go(0)
         addComment() {
             let userInfo = JSON.parse(localStorage.getItem('user'))
             let token = userInfo.token
